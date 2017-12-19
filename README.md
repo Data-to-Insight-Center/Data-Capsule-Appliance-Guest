@@ -10,6 +10,8 @@ Let's create a DC image based on Ubuntu 16.04 LTS using Packer.
 
 Download the latest version of Packer from https://www.packer.io/downloads.html. A previous version for linux is included in this repo by default. 
 
+Install qemu (qemu-system-x86_64) (for the VM creation). 
+
 ### Running Packer
 
 First add your public key replacing the content in the file uploads/root_authorized_keys
