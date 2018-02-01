@@ -1,6 +1,9 @@
-cd /tmp
-apt-get install unzip
-wget https://github.com/sgsinclair/VoyantServer/releases/download/2.4.0-M1/VoyantServer2_4-M1.zip 
-unzip VoyantServer2*.zip
-mv VoyantServer2_4-M1 /opt/VoyantServer
-chown -R $SSH_USERNAME /opt/VoyantServer
+pt-get install unzip
+wget https://analytics.hathitrust.org/files/voyant.zip
+unzip voyant.zip
+mkdir /opt/applications
+cp -r VoyantServer2_4-M2 /opt/applications/
+chown -R $SSH_USERNAME /opt/applications/VoyantServer2_4-M2
+mkdir -p /home/dcuser/Desktop
+cp /opt/applications/VoyantServer2_4-M2/voyant.desktop /home/dcuser/Desktop/
+chown -R $SSH_USERNAME /home/dcuser/Desktop/voyant.desktop
