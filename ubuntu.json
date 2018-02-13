@@ -76,14 +76,17 @@
         "scripts/installSpark.sh",
         "scripts/desktop.sh",
         "scripts/installVoyantServer.sh",
-	"scripts/userProvisioning.sh",
-        "scripts/postprocessor.sh"
+	"scripts/userProvisioning.sh"
       ],
       "type": "shell"
     },
     {
       "type": "shell",
       "inline": ["export PATH=/opt/anaconda/bin:$PATH" ," conda update -y conda | conda install -y -c anaconda pytables"]
+    },
+    {
+      "type": "shell",
+      "inline": ["rm -rf {{user `user_home_dir`}}/uploads"]
     }
   ],
   "variables": {
