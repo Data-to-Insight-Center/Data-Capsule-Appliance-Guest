@@ -61,5 +61,9 @@ NODPMS_CONFIG=/etc/xdg/autostart/nodpms.desktop
 fi
 
 # Remove the lockscreen
-gsettings set org.gnome.desktop.lockdown disable-lock-screen 'true'
+dbus-launch gsettings set org.gnome.desktop.session idle-delay 0
+dbus-launch gsettings set org.gnome.desktop.screensaver lock-enabled false
 
+chown -R $SSH_USERNAME:$SSH_USERNAME /home/$SSH_USERNAME
+find /home/$SSH_USERNAME/ -type d -exec chmod 750 {} +
+find /home/$SSH_USERNAME/ -type f -exec chmod 640 {} +

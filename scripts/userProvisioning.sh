@@ -15,4 +15,3 @@ passwd -d $SSH_USERNAME
 
 # Removing password authentication for SSH for the DC
 sed -i -e 's/#PasswordAuthentication\syes/PasswordAuthentication no/g' /etc/ssh/sshd_config
-
