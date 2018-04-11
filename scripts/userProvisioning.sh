@@ -13,5 +13,8 @@ cp /home/$SSH_USERNAME/uploads/dcuserSudoAccessRestrictions /etc/sudoers.d/dcuse
 chmod 0440 /etc/sudoers.d/dcuserSudoAccessRestrictions
 passwd -d $SSH_USERNAME
 
+# Removing the UI password prompt
+cp /home/$SSH_USERNAME/uploads/99-nouipassword.pkla /etc/polkit-1/localauthority/50-local.d/99-nouipassword.pkla
+
 # Removing password authentication for SSH for the DC
 sed -i -e 's/#PasswordAuthentication\syes/PasswordAuthentication no/g' /etc/ssh/sshd_config
