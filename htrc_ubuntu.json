@@ -77,6 +77,7 @@
         "scripts/desktop.sh",
         "scripts/installVoyantServer.sh",
         "scripts/installNginx.sh",
+	"scripts/installGoogleChrome.sh",
 	"scripts/userProvisioning.sh"
       ],
       "type": "shell"
