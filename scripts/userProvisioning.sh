@@ -5,6 +5,13 @@ chown -R root /root/.ssh
 chmod 700 /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 
+#Create .ssh directory and authorized_keys file for DCUSER
+mkdir /home/$SSH_USERNAME/.ssh
+touch /home/$SSH_USERNAME/.ssh/authorized_keys
+chown -R $SSH_USERNAME /home/$SSH_USERNAME/.ssh
+chmod 700 /home/$SSH_USERNAME/.ssh
+chmod 600 /home/$SSH_USERNAME/.ssh/authorized_keys
+ 
 # enable logging of root user activity
 cat  /home/$SSH_USERNAME/uploads/enableSyslogging >> /root/.bashrc
 
