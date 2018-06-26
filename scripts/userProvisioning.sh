@@ -15,6 +15,10 @@ chmod 600 /home/$SSH_USERNAME/.ssh/authorized_keys
 # enable logging of root user activity
 cat  /home/$SSH_USERNAME/uploads/enableSyslogging >> /root/.bashrc
 
+# adding user to the dialout group 
+groupadd -g 20 dialout
+usermod -a -G dialout $SSH_USERNAME
+
 # Removing the password for the DCUSER
 cp /home/$SSH_USERNAME/uploads/dcuserSudoAccessRestrictions /etc/sudoers.d/dcuserSudoAccessRestrictions
 chmod 0440 /etc/sudoers.d/dcuserSudoAccessRestrictions
