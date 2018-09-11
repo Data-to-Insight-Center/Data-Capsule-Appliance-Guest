@@ -1,6 +1,6 @@
 #update and upgrade ubuntu
-apt-get update
-apt-get -y upgrade
+apt-get -y update
+#apt-get -y upgrade
 
 #generic ubuntu packages
 apt-get install -y git maven parallel curl htop iotop jq pcregrep zsh python-setuptools python-dev python3-setuptools
