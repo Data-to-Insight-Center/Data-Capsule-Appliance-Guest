@@ -16,3 +16,6 @@ pip3 install numpy scipy matplotlib pandas nltk regex GenSim ujson dask toolz th
 #fixing the terminal LANG issue
 locale-gen
 localectl set-locale LANG="en_US.UTF-8"
+
+# install nfs-mount client
+apt-get install -y nfs-common
