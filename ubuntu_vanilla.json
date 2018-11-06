@@ -66,9 +66,10 @@
       "execute_command": "echo '{{ user `ssh_password` }}' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
         "scripts/grubfix.sh",
-        "scripts/installPackages.sh",
+        "scripts/installPackages_vanilla.sh",
         "scripts/negotiator-guest.sh",
         "scripts/releaseResults.sh",
+	"scripts/worksetDownloader.sh",
         "scripts/desktop.sh",
 	"scripts/userProvisioning.sh"
       ],

@@ -7,13 +7,15 @@ apt-get install -y git maven parallel curl htop iotop jq pcregrep zsh python-set
 
 #python 2.7 packages
 easy_install pip
-pip install numpy scipy matplotlib pandas nltk regex GenSim ujson dask toolz theano csvkit htrc-feature-reader wget cython topicexplorer htrc
+pip install numpy scipy matplotlib pandas nltk wget docopt
 
 #python 3 packages
 easy_install3 pip
-pip3 install numpy scipy matplotlib pandas nltk regex GenSim ujson dask toolz theano csvkit htrc-feature-reader wget cython topicexplorer htrc
+pip3 install numpy scipy matplotlib pandas nltk wget docopt
 
 #fixing the terminal LANG issue
 locale-gen
 localectl set-locale LANG="en_US.UTF-8"
 
+# install nfs-mount client
+apt-get install -y nfs-common
