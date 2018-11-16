@@ -29,3 +29,6 @@ cp /home/$SSH_USERNAME/uploads/99-nouipassword.pkla /etc/polkit-1/localauthority
 
 # Removing password authentication for SSH for the DC
 sed -i -e 's/#PasswordAuthentication\syes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+
+# Remove Ubuntu upgrade prompt
+sed -i 's/Prompt=.*/Prompt=never/g' /etc/update-manager/release-upgrades
