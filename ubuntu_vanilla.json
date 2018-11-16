@@ -70,6 +70,7 @@
         "scripts/negotiator-guest.sh",
         "scripts/releaseResults.sh",
 	"scripts/worksetDownloader.sh",
+	"scripts/nfsMountScript.sh",
         "scripts/desktop.sh",
 	"scripts/userProvisioning.sh"
       ],
